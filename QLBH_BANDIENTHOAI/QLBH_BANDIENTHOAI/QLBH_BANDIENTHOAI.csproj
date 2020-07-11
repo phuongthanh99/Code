@@ -1,0 +1,986 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89167855-069E-4643-AD71-2126C8AA3D9F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBH_BANDIENTHOAI</RootNamespace>
+    <AssemblyName>QLBH_BANDIENTHOAI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\CTHoaDon.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\QLAdmin.aspx" />
+    <Content Include="Admin\QLAnhHHDetail.aspx" />
+    <Content Include="Admin\QLAnhSP.aspx" />
+    <Content Include="Admin\QLAnhSPDetail.aspx" />
+    <Content Include="Admin\QLHangHoa.aspx" />
+    <Content Include="Admin\QLHangHoaDetail.aspx" />
+    <Content Include="Admin\QLHDBDetail.aspx" />
+    <Content Include="Admin\QLHoaDonBan.aspx" />
+    <Content Include="Admin\QLiNhanVien.aspx" />
+    <Content Include="Admin\QLiNhanVienDetail.aspx" />
+    <Content Include="Admin\QLKhachHang.aspx" />
+    <Content Include="Admin\QLKhachHangDetail.aspx" />
+    <Content Include="Admin\TemplateAdmin\assets\images\avatar-1.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\avatar-2.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\avatar-3.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\avatar-4.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\avatar-5.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\bitbucket.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\card-img-1.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\card-img-2.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\card-img-3.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\card-img.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\down-arrow.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\drag-indicator.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\dribbble.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\dropbox.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-product-img-1.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-product-img-2.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-product-img-3.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-product-img-4.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-slider-img-1.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-slider-img-2.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\eco-slider-img-3.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\error-img.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\github.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\loader.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\logo.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\mail_chimp.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\product-pic-2.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\product-pic-3.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\product-pic-4.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\product-pic.jpg" />
+    <Content Include="Admin\TemplateAdmin\assets\images\slack.png" />
+    <Content Include="Admin\TemplateAdmin\assets\images\switch.png" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\css\style.css" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\dashboard-ecommerce.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\dashboard-finance.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\dashboard-influencer.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\dashboard-sales.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\gmaps.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\google_map.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\jvectormap.custom.js" />
+    <Content Include="Admin\TemplateAdmin\assets\libs\js\main-js.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.png" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-colorpicker\jquery-asColorPicker\dist\jquery-asColorPicker.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-colorpicker\jquery-asColor\dist\jquery-asColor.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-colorpicker\jquery-asGradient\dist\jquery-asGradient.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\c3charts\c3.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\c3charts\c3.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\c3charts\C3chartjs.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\c3charts\d3-5.4.0.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\chartist-bundle\chartist-plugin-threshold.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\chartist-bundle\chartist.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\chartist-bundle\chartist.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\chartist-bundle\Chartistjs.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\charts-bundle\Chart.bundle.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\charts-bundle\chartjs.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\morris-bundle\morris.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\morris-bundle\morris.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\morris-bundle\morrisjs.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\morris-bundle\Morrisjs.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\morris-bundle\raphael.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\sparkline\jquery.sparkline.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\charts\sparkline\spark-js.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\cropper\dist\cropper-int.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\cropper\dist\cropper.min.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\cropper\dist\cropper.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\custom-js\jquery.multi-select.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\css\buttons.bootstrap4.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\css\dataTables.bootstrap4.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\css\fixedHeader.bootstrap4.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\css\select.bootstrap4.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\js\data-table.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datepicker\datepicker.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datepicker\moment.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datepicker\tempusdominus-bootstrap-4.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\datepicker\tempusdominus-bootstrap-4.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\dropzone\dropzone.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\style.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flag-icon.min.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ad.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ae.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\af.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ag.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ai.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\al.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\am.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ao.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\aq.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ar.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\as.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\at.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\au.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\aw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ax.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\az.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ba.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bb.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bd.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\be.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bh.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bi.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bj.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bo.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bq.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\br.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bs.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bv.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\by.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\bz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ca.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cd.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ch.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ci.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ck.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\co.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cv.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cx.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cy.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\cz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\de.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\dj.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\dk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\dm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\do.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\dz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ec.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ee.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\eg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\eh.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\er.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\es.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\et.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\fi.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\fj.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\fk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\fm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\fo.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\fr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ga.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gb.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gd.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ge.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gh.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gi.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gp.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gq.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gs.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\gy.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\hk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\hm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\hn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\hr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ht.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\hu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\id.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ie.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\il.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\im.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\in.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\io.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\iq.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ir.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\is.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\it.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\je.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\jm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\jo.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\jp.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ke.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kh.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ki.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\km.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kp.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ky.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\kz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\la.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lb.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\li.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ls.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\lv.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ly.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ma.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\md.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\me.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mh.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ml.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mo.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mp.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mq.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ms.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mv.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mx.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\my.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\mz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\na.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\nc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ne.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\nf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ng.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ni.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\nl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\no.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\np.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\nr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\nu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\nz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\om.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pa.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pe.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ph.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ps.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\pw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\py.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\qa.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\re.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ro.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\rs.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ru.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\rw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sa.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sb.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sd.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\se.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sh.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\si.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sj.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\so.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ss.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\st.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sv.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sx.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sy.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\sz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\td.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\th.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tj.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tk.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tl.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\to.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tr.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tv.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\tz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ua.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ug.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\um.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\us.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\uy.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\uz.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\va.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\vc.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ve.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\vg.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\vi.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\vn.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\vu.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\wf.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ws.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\ye.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\yt.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\za.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\zm.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\flag-icon-css\flags\zw.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\css\fontawesome-all.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.html" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\themify-icons\fonts\themify9f24.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\themify-icons\themify-icons.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\full-calendar\css\fullcalendar.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\full-calendar\css\fullcalendar.print.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\full-calendar\js\calendar.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\full-calendar\js\fullcalendar.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\full-calendar\js\jquery-ui.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\full-calendar\js\moment.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\gauge\gauge.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\gauge\gauge.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\inputmask\css\inputmask.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\inputmask\js\jquery.inputmask.bundle.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jquery\jquery-3.3.1.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-au-mill.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-in-mill.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\multi-select\css\multi-select.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\multi-select\js\jquery.multi-select.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\parsley\parsley.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\select2\css\select2.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\select2\js\select2.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\shortable-nestable\jquery.nestable.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\shortable-nestable\sort-nest.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\shortable-nestable\Sortable.min.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\slimscroll\jquery.slimscroll.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\summernote\css\summernote-bs4.css" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\summernote\js\summernote-bs4.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\timeline\img\cd-icon-location.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\timeline\img\cd-icon-movie.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\timeline\img\cd-icon-picture.svg" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\timeline\js\main.js" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\vector-map\jqvmap.css" />
+    <Content Include="Admin\TemplateAdmin\css\32px.png" />
+    <Content Include="Admin\TemplateAdmin\css\bootstrap.min.css" />
+    <Content Include="Admin\TemplateAdmin\css\style.css" />
+    <Content Include="Admin\TemplateAdmin\css\throbber.gif" />
+    <Content Include="Admin\TemplateAdmin\css\tree-viewer.css" />
+    <Content Include="Admin\TemplateAdmin\img\favicon.ico" />
+    <Content Include="Admin\TemplateAdmin\img\logo.png" />
+    <Content Include="Admin\TemplateAdmin\js\bootstrap.min.js" />
+    <Content Include="Admin\TemplateAdmin\js\jquery-3.1.0.min.js" />
+    <Content Include="Admin\TemplateAdmin\js\jstree.active.js" />
+    <Content Include="Admin\TemplateAdmin\js\jstree.min.js" />
+    <Content Include="Client\AddProductToCart.aspx" />
+    <Content Include="Client\DeleteCartItem.aspx" />
+    <Content Include="Client\EditCartItem.aspx" />
+    <Content Include="Client\LienHe.aspx" />
+    <Content Include="Client\register.aspx" />
+    <Content Include="Client\SanPhamDetail.aspx" />
+    <Content Include="Client\Shop.aspx" />
+    <Content Include="Client\shopping-cart.aspx" />
+    <Content Include="Client\TemplateKH\css\bootstrap.min.css" />
+    <Content Include="Client\TemplateKH\css\elegant-icons.css" />
+    <Content Include="Client\TemplateKH\css\font-awesome.min.css" />
+    <Content Include="Client\TemplateKH\css\jquery-ui.min.css" />
+    <Content Include="Client\TemplateKH\css\nice-select.css" />
+    <Content Include="Client\TemplateKH\css\owl.carousel.min.css" />
+    <Content Include="Client\TemplateKH\css\slicknav.min.css" />
+    <Content Include="Client\TemplateKH\css\style.css" />
+    <Content Include="Client\TemplateKH\css\themify-icons.css" />
+    <Content Include="Client\TemplateKH\fonts\ElegantIcons.svg" />
+    <Content Include="Client\TemplateKH\fonts\fontawesome-webfont.svg" />
+    <Content Include="Client\TemplateKH\fonts\themify.svg" />
+    <Content Include="Client\TemplateKH\img\banner-1.jpg" />
+    <Content Include="Client\TemplateKH\img\banner-2.jpg" />
+    <Content Include="Client\TemplateKH\img\banner-3.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-1.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-2.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-3.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-4.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-5.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-6.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-detail-1.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-detail-2.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-detail-3.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\blog-detail.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\next-blog.png" />
+    <Content Include="Client\TemplateKH\img\blog\post-by.png" />
+    <Content Include="Client\TemplateKH\img\blog\prev-blog.png" />
+    <Content Include="Client\TemplateKH\img\blog\recent-1.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\recent-2.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\recent-3.jpg" />
+    <Content Include="Client\TemplateKH\img\blog\recent-4.jpg" />
+    <Content Include="Client\TemplateKH\img\cart-page\product-1.jpg" />
+    <Content Include="Client\TemplateKH\img\cart-page\product-2.jpg" />
+    <Content Include="Client\TemplateKH\img\cart-page\product-3.jpg" />
+    <Content Include="Client\TemplateKH\img\flag-1.jpg" />
+    <Content Include="Client\TemplateKH\img\flag-2.jpg" />
+    <Content Include="Client\TemplateKH\img\footer-logo.png" />
+    <Content Include="Client\TemplateKH\img\hero-1.jpg" />
+    <Content Include="Client\TemplateKH\img\hero-2.jpg" />
+    <Content Include="Client\TemplateKH\img\hero-3.jpg" />
+    <Content Include="Client\TemplateKH\img\icon-1.png" />
+    <Content Include="Client\TemplateKH\img\icon-2.png" />
+    <Content Include="Client\TemplateKH\img\icon-3.png" />
+    <Content Include="Client\TemplateKH\img\insta-1.jpg" />
+    <Content Include="Client\TemplateKH\img\insta-2.jpg" />
+    <Content Include="Client\TemplateKH\img\insta-3.jpg" />
+    <Content Include="Client\TemplateKH\img\insta-4.jpg" />
+    <Content Include="Client\TemplateKH\img\insta-5.jpg" />
+    <Content Include="Client\TemplateKH\img\insta-6.jpg" />
+    <Content Include="Client\TemplateKH\img\latest-1.jpg" />
+    <Content Include="Client\TemplateKH\img\latest-2.jpg" />
+    <Content Include="Client\TemplateKH\img\latest-3.jpg" />
+    <Content Include="Client\TemplateKH\img\logo-carousel\logo-1.png" />
+    <Content Include="Client\TemplateKH\img\logo-carousel\logo-2.png" />
+    <Content Include="Client\TemplateKH\img\logo-carousel\logo-3.png" />
+    <Content Include="Client\TemplateKH\img\logo-carousel\logo-4.png" />
+    <Content Include="Client\TemplateKH\img\logo-carousel\logo-5.png" />
+    <Content Include="Client\TemplateKH\img\logo.png" />
+    <Content Include="Client\TemplateKH\img\payment-method.png" />
+    <Content Include="Client\TemplateKH\img\product-single\avatar-1.png" />
+    <Content Include="Client\TemplateKH\img\product-single\avatar-2.png" />
+    <Content Include="Client\TemplateKH\img\product-single\product-1.jpg" />
+    <Content Include="Client\TemplateKH\img\product-single\product-2.jpg" />
+    <Content Include="Client\TemplateKH\img\product-single\product-3.jpg" />
+    <Content Include="Client\TemplateKH\img\product-single\tab-desc.jpg" />
+    <Content Include="Client\TemplateKH\img\product-single\thumb-1.jpg" />
+    <Content Include="Client\TemplateKH\img\product-single\thumb-2.jpg" />
+    <Content Include="Client\TemplateKH\img\product-single\thumb-3.jpg" />
+    <Content Include="Client\TemplateKH\img\products\man-1.jpg" />
+    <Content Include="Client\TemplateKH\img\products\man-2.jpg" />
+    <Content Include="Client\TemplateKH\img\products\man-3.jpg" />
+    <Content Include="Client\TemplateKH\img\products\man-4.jpg" />
+    <Content Include="Client\TemplateKH\img\products\man-large.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-1.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-2.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-3.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-4.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-5.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-6.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-7.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-8.jpg" />
+    <Content Include="Client\TemplateKH\img\products\product-9.jpg" />
+    <Content Include="Client\TemplateKH\img\products\women-1.jpg" />
+    <Content Include="Client\TemplateKH\img\products\women-2.jpg" />
+    <Content Include="Client\TemplateKH\img\products\women-3.jpg" />
+    <Content Include="Client\TemplateKH\img\products\women-4.jpg" />
+    <Content Include="Client\TemplateKH\img\products\women-large.jpg" />
+    <Content Include="Client\TemplateKH\img\select-product-1.jpg" />
+    <Content Include="Client\TemplateKH\img\select-product-2.jpg" />
+    <Content Include="Client\TemplateKH\img\time-bg.jpg" />
+    <Content Include="Client\TemplateKH\js\bootstrap.min.js" />
+    <Content Include="Client\TemplateKH\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Client\TemplateKH\js\jquery-3.3.1.min.js" />
+    <Content Include="Client\TemplateKH\js\jquery-ui.min.js" />
+    <Content Include="Client\TemplateKH\js\jquery.countdown.min.js" />
+    <Content Include="Client\TemplateKH\js\jquery.dd.min.js" />
+    <Content Include="Client\TemplateKH\js\jquery.nice-select.min.js" />
+    <Content Include="Client\TemplateKH\js\jquery.slicknav.js" />
+    <Content Include="Client\TemplateKH\js\jquery.zoom.min.js" />
+    <Content Include="Client\TemplateKH\js\main.js" />
+    <Content Include="Client\TemplateKH\js\owl.carousel.min.js" />
+    <Content Include="Client\TrangChu.aspx" />
+    <Content Include="Client\login.aspx" />
+    <Content Include="Client\index.aspx" />
+    <Content Include="QLBH_DT.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBH_DT.edmx</DependentUpon>
+      <LastGenOutput>QLBH_DT.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLBH_DT.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBH_DT.edmx</DependentUpon>
+      <LastGenOutput>QLBH_DT.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CTHoaDon.aspx.cs">
+      <DependentUpon>CTHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CTHoaDon.aspx.designer.cs">
+      <DependentUpon>CTHoaDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLAdmin.aspx.cs">
+      <DependentUpon>QLAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLAdmin.aspx.designer.cs">
+      <DependentUpon>QLAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLAnhHHDetail.aspx.cs">
+      <DependentUpon>QLAnhHHDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLAnhHHDetail.aspx.designer.cs">
+      <DependentUpon>QLAnhHHDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLAnhSP.aspx.cs">
+      <DependentUpon>QLAnhSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLAnhSP.aspx.designer.cs">
+      <DependentUpon>QLAnhSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLAnhSPDetail.aspx.cs">
+      <DependentUpon>QLAnhSPDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLAnhSPDetail.aspx.designer.cs">
+      <DependentUpon>QLAnhSPDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLHangHoa.aspx.cs">
+      <DependentUpon>QLHangHoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLHangHoa.aspx.designer.cs">
+      <DependentUpon>QLHangHoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLHangHoaDetail.aspx.cs">
+      <DependentUpon>QLHangHoaDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLHangHoaDetail.aspx.designer.cs">
+      <DependentUpon>QLHangHoaDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLHDBDetail.aspx.cs">
+      <DependentUpon>QLHDBDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLHDBDetail.aspx.designer.cs">
+      <DependentUpon>QLHDBDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLHoaDonBan.aspx.cs">
+      <DependentUpon>QLHoaDonBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLHoaDonBan.aspx.designer.cs">
+      <DependentUpon>QLHoaDonBan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLiNhanVien.aspx.cs">
+      <DependentUpon>QLiNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLiNhanVien.aspx.designer.cs">
+      <DependentUpon>QLiNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLiNhanVienDetail.aspx.cs">
+      <DependentUpon>QLiNhanVienDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLiNhanVienDetail.aspx.designer.cs">
+      <DependentUpon>QLiNhanVienDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLKhachHang.aspx.cs">
+      <DependentUpon>QLKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLKhachHang.aspx.designer.cs">
+      <DependentUpon>QLKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLKhachHangDetail.aspx.cs">
+      <DependentUpon>QLKhachHangDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLKhachHangDetail.aspx.designer.cs">
+      <DependentUpon>QLKhachHangDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartItem.cs" />
+    <Compile Include="CauHinh.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client\AddProductToCart.aspx.cs">
+      <DependentUpon>AddProductToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\AddProductToCart.aspx.designer.cs">
+      <DependentUpon>AddProductToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\DeleteCartItem.aspx.cs">
+      <DependentUpon>DeleteCartItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\DeleteCartItem.aspx.designer.cs">
+      <DependentUpon>DeleteCartItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\EditCartItem.aspx.cs">
+      <DependentUpon>EditCartItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\EditCartItem.aspx.designer.cs">
+      <DependentUpon>EditCartItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\LienHe.aspx.designer.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Client\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\SanPhamDetail.aspx.cs">
+      <DependentUpon>SanPhamDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\SanPhamDetail.aspx.designer.cs">
+      <DependentUpon>SanPhamDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\shopping-cart.aspx.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\shopping-cart.aspx.designer.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTHoaDonBan.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTHoaDonNhap.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTKM.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HangHoa.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonBan.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonNhap.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiHangHoa.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NguonHang.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLBH_DT.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH_DT.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBH_DT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBH_DT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH_DT.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>QLBH_DT.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-Black.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-BlackItalic.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-Bold.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-BoldItalic.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-Book.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-BookItalic.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-Medium.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\circular-std\CircularStd-MediumItalic.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\themify-icons\fonts\themify.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\themify-icons\fonts\themify.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\themify-icons\fonts\themify9f24.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\themify-icons\fonts\themifyd41d.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\fonts\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\summernote\css\font\summernote.eot" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\summernote\css\font\summernote.ttf" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\summernote\css\font\summernote.woff" />
+    <Content Include="Admin\TemplateAdmin\assets\vendor\summernote\css\font\summernote.woff2" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Client\Main.Master" />
+    <Content Include="Client\TemplateKH\fonts\ElegantIcons.eot" />
+    <Content Include="Client\TemplateKH\fonts\ElegantIcons.ttf" />
+    <Content Include="Client\TemplateKH\fonts\ElegantIcons.woff" />
+    <Content Include="Client\TemplateKH\fonts\fontawesome-webfont.eot" />
+    <Content Include="Client\TemplateKH\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Client\TemplateKH\fonts\fontawesome-webfont.woff" />
+    <Content Include="Client\TemplateKH\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Client\TemplateKH\fonts\FontAwesome.otf" />
+    <Content Include="Client\TemplateKH\fonts\themify.eot" />
+    <Content Include="Client\TemplateKH\fonts\themify.ttf" />
+    <Content Include="Client\TemplateKH\fonts\themify.woff" />
+    <Content Include="Client\TemplateKH\Source\bootstrap-4.4.1-dist.zip" />
+    <Content Include="Client\TemplateKH\Source\elegant_font.zip" />
+    <Content Include="Client\TemplateKH\Source\font-awesome-4.7.0.zip" />
+    <Content Include="Client\TemplateKH\Source\jquery-nice-select-1.1.0.zip" />
+    <Content Include="Client\TemplateKH\Source\jquery-ui-1.12.1.zip" />
+    <Content Include="Client\TemplateKH\Source\jQuery.countdown-master.zip" />
+    <Content Include="Client\TemplateKH\Source\Magnific-Popup-master.zip" />
+    <Content Include="Client\TemplateKH\Source\OwlCarousel2-2.3.4.zip" />
+    <Content Include="Client\TemplateKH\Source\sass.zip" />
+    <Content Include="Client\TemplateKH\Source\SlickNav-master.zip" />
+    <Content Include="Client\TemplateKH\Source\themify-icons-font.zip" />
+    <Content Include="Client\TemplateKH\Source\zoom-master.zip" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="QLBH_DT.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBH_DT.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="QLBH_DT.edmx.diagram">
+      <DependentUpon>QLBH_DT.edmx</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UpLoads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50492</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50492/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

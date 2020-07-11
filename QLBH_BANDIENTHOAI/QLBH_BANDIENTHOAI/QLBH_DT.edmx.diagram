@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a72b07e20f14b4785535900b2e98d35" Name="Diagram1">
+        <EntityTypeShape EntityType="QLBHModel1.CauHinh" Width="1.5" PointX="10.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.CTHoaDonBan" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.CTHoaDonNhap" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.CTKM" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.HangHoa" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.HoaDonBan" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.HoaDonNhap" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.KhachHang" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.LoaiHangHoa" Width="1.5" PointX="3.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.Multimedia" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.NguoiDung" Width="1.5" PointX="10.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.NguonHang" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.NhanVien" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel1.sysdiagrams" Width="1.5" PointX="5.75" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="QLBHModel1.FK_CTHoaDonBan_CTKM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_CTHoaDonNhap_HangHoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_CTHoaDonNhap_HoaDonNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_HoaDonBan_CTKM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_HangHoa_LoaiHangHoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_Multimedia_HangHoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_HoaDonBan_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_HoaDonBan_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_HoaDonNhap_NguonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel1.FK_HoaDonNhap_NhanVien" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
